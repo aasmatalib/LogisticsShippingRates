@@ -1,1 +1,17 @@
+def calculate_shipping(weight, distance):
+    rate_per_lb = 0.5  # Rate per pound
+    rate_per_mile = 1.5  # Rate per mile
+
+    shipping_cost = weight * rate_per_lb + distance * rate_per_mile
+    return shipping_cost
+
+def main():
+    weight = float(input("Enter the weight of the package (in pounds): "))
+    distance = float(input("Enter the distance to be shipped (in miles): "))
+
+    shipping_cost = calculate_shipping(weight, distance)
+    print("Shipping cost: $", shipping_cost)
+
+if __name__ == "__main__":
+    main()
 
